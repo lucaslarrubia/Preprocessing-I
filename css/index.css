@@ -107,8 +107,7 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol {
   list-style: none;
 }
 blockquote,
@@ -165,10 +164,31 @@ header {
   text-align: center;
   margin-top: 30px;
 }
+.middle-content {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
 .image {
   display: flex;
   justify-content: center;
   margin-top: 25px;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+  text-align: center;
+}
+.list2 {
+  margin-top: 15px;
 }
 .bottom-content {
   display: flex;
@@ -183,7 +203,7 @@ header {
   justify-content: flex-end;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 328px;
+  width: 335px;
   text-align: end;
   padding-right: 50px;
   margin-right: 50px;
