@@ -59,7 +59,7 @@ html, body {
 
 // variables
 
-@nav-color: @color;
+@nav-color: @color:
 @top-font: @upperfont:
 
 
@@ -79,43 +79,46 @@ html, body {
 	font-weight: bold;
 }
 
-.container {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	width: 100%;
-	font-family: @upperfont;
-}
+// .container {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-content: center;
+// 	width: 100%;
+// 	font-family: @upperfont;
+// }
 
 // top section 
 
 header {
-	margin-top: 20px;
-}
+margin-top: 20px;
 
-.nav {
+	.nav {
 	display: flex;
 	justify-content: space-evenly;
-}
 
-.nav a {
-	text-decoration: none;
-	color: @color;
-}
 
-.name {
-	display: flex;
-	justify-content: center;
-	margin-top: 50px;
-	border: 2px solid black;
-	padding: 20px 30px;
-	border-radius: 10px;
-	font-size: 2em;
-}
+		.nav a {
+		text-decoration: none;
+		color: @nav-color;
 
-.job-title {
-	text-align: center;
-	margin-top: 30px;
+
+			.name {
+			display: flex;
+			justify-content: center;
+			margin-top: 100px;
+			border: 2px solid black;
+			padding: 20px 30px;
+			border-radius: 10px;
+			font-size: 2em;
+
+
+				.job-title {
+				text-align: center;
+				margin-top: 30px;
+				}
+			}
+		}
+	}
 }
 
 // middle section 
@@ -123,7 +126,6 @@ header {
 .middle-content {
 	display: flex;
 	flex-direction: column;
-}
 
 .image {
 	display: flex;
@@ -144,6 +146,7 @@ header {
 	flex-direction: column;
 	margin-top: 15px;
 	text-align: center;
+	}
 }
 
 .list2 {
@@ -199,7 +202,11 @@ h3 {
 	justify-content: center;
 }
 
-@media (max-width: 500px;) {
+.job-title2 {
+	.jobtitlecolor;
+}
+
+@media (max-width: 500px) {
 	.container {
 		display: flex;
 		justify-content: center;
