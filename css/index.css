@@ -136,51 +136,63 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-content: center;
   width: 100%;
   font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+.top-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 header {
   margin-top: 20px;
 }
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 50%;
 }
 .nav a {
+  display: flex;
+  justify-content: space-evenly;
   text-decoration: none;
   color: gray;
 }
 .name {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
   border: 2px solid black;
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 2em;
+}
+header .name {
+  display: flex;
+  justify-content: center;
 }
 .job-title {
   text-align: center;
   margin-top: 30px;
 }
 .middle-content {
-  font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
 }
-.image {
+.middle-content .image {
   display: flex;
   justify-content: center;
   margin-top: 25px;
 }
-.intro {
+.middle-content .intro {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
 }
-.skills {
+.middle-content .skills {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -196,7 +208,7 @@ header {
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
-  font-family: 'Raleway', sans-serif;
+  align-items: center;
 }
 .bottom-content .experience {
   display: flex;
@@ -204,14 +216,19 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   width: 335px;
+  height: 487px;
   text-align: end;
+  margin-left: 45px;
   padding-right: 50px;
   margin-right: 50px;
   border-right: 4px solid grey;
 }
 .bottom-content .education {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  width: 335px;
+  height: 487px;
 }
 h2 {
   font-weight: bold;
@@ -231,4 +248,31 @@ h3 {
 .experience .education {
   display: flex;
   justify-content: center;
+  align-content: center;
+}
+.education {
+  text-align: left;
+}
+.company {
+  color: gray;
+  font-weight: bold;
+}
+.school {
+  color: gray;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .bottom-content {
+    display: flex;
+    justify-content: center;
+  }
 }

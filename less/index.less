@@ -59,11 +59,11 @@ html, body {
 
 // variables
 
-@nav-color: @color:
-@top-font: @upperfont:
+@nav-color: gray;
+@top-font: 'Comfortaa', cursive;
 
 
-@color: gray;
+@font: gray;
 @upperfont: 'Comfortaa', cursive;
 
 // mixins
@@ -74,52 +74,71 @@ html, body {
 	margin-bottom: 15px;
 }
 
-.jobtitlecolor() {
-	color: red;
+.companycolor() {
+	color: gray;
 	font-weight: bold;
 }
 
-// .container {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-content: center;
-// 	width: 100%;
-// 	font-family: @upperfont;
-// }
+.schoolcolor() {
+	color: gray;
+	font-weight: bold;
+}
+
+// start of page 
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	width: 100%;
+	font-family: @upperfont;
+	text-align: center;
+}
 
 // top section 
 
-header {
-margin-top: 20px;
+.top-content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 
-	.nav {
+header {
+	margin-top: 20px;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.nav a {
 	display: flex;
 	justify-content: space-evenly;
-
-
-		.nav a {
-		text-decoration: none;
-		color: @nav-color;
-
-
-			.name {
-			display: flex;
-			justify-content: center;
-			margin-top: 100px;
-			border: 2px solid black;
-			padding: 20px 30px;
-			border-radius: 10px;
-			font-size: 2em;
-
-
-				.job-title {
-				text-align: center;
-				margin-top: 30px;
-				}
-			}
-		}
+	text-decoration: none;
+	color: @nav-color;
 	}
+
+.name {
+	margin-top: 100px;
+	border: 2px solid black;
+	padding: 20px 30px;
+	border-radius: 10px;
+	font-size: 2em;
+	}
+
+header .name {
+	display: flex;
+	justify-content: center;
 }
+
+.job-title {
+	text-align: center;
+	margin-top: 30px;
+	}
 
 // middle section 
 
@@ -161,6 +180,7 @@ margin-top: 20px;
 	padding: 20px;
 	margin-top: 50px;
 	margin-bottom: 50px;
+	align-items: center;
 }
 
 .bottom-content .experience {
@@ -169,7 +189,9 @@ margin-top: 20px;
 	flex-wrap: wrap;
 	flex-direction: column;
 	width: 335px;
+	height: 487px;
 	text-align: end;
+	margin-left: 45px;
 	padding-right: 50px;
 	margin-right: 50px;
 	border-right: 4px solid grey;
@@ -178,6 +200,10 @@ margin-top: 20px;
 .bottom-content .education {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 335px;
+	height: 487px;
 }
 
 h2 {
@@ -200,15 +226,47 @@ h3 {
 .experience .education {
 	display: flex;
 	justify-content: center;
+	align-content: center;
 }
 
-.job-title2 {
-	.jobtitlecolor;
+.education {
+	text-align: left;
 }
+
+// .contact {
+// 	margin-top: 48px;
+// }
+
+.company {
+	.companycolor;
+}
+
+.school {
+	.schoolcolor;
+}
+
+// @media (max-width: 1200px) {
+// 	.container {
+// 		display: flex;
+// 		justify-content: center;
+// 	}
+// }
 
 @media (max-width: 500px) {
 	.container {
 		display: flex;
 		justify-content: center;
+	}
+
+	.intro {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.bottom-content {
+		display: flex;
+		justify-content: center;
+		
 	}
 }
