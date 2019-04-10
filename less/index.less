@@ -65,12 +65,28 @@ html, body {
 	font-family: 'Comfortaa', cursive;
 }
 
+header {
+	margin-top: 20px;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav a {
+	text-decoration: none;
+	color: gray;
+}
+
 .name {
+	display: flex;
+	justify-content: center;
 	margin-top: 50px;
 	border: 2px solid black;
-	padding: 20px 100px;
+	padding: 20px 30px;
 	border-radius: 10px;
-	font-size: 2.5rem;
+	font-size: 2em;
 }
 
 .job-title {
@@ -82,4 +98,53 @@ html, body {
 	display: flex;
 	justify-content: center;
 	margin-top: 25px;
+}
+
+.bottom-content {
+	display: flex;
+	justify-content: center; 
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.bottom-content .experience {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 328px;
+	text-align: end;
+	padding-right: 50px;
+	margin-right: 50px;
+	border-right: 4px solid grey;
+}
+
+.bottom-content .education {
+	display: flex;
+	flex-direction: column;
+}
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-weight: bold;
+	margin: 15px 0 15px 0;
+}
+
+.company {
+	font-weight: bold;
+}
+
+.desc {
+	margin: 15px 0 15px 0;
+}
+
+.experience .education {
+	display: flex;
+	justify-content: center;
 }
