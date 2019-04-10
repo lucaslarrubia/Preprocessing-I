@@ -57,12 +57,34 @@ html, body {
     height: 100%;
 }
 
+// variables
+
+@nav-color: @color;
+@top-font: @upperfont:
+
+
+@color: gray;
+@upperfont: 'Comfortaa', cursive;
+
+// mixins
+
+.font-class() {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.jobtitlecolor() {
+	color: red;
+	font-weight: bold;
+}
+
 .container {
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	width: 100%;
-	font-family: 'Comfortaa', cursive;
+	font-family: @upperfont;
 }
 
 // top section 
@@ -78,7 +100,7 @@ header {
 
 .nav a {
 	text-decoration: none;
-	color: gray;
+	color: @color;
 }
 
 .name {
@@ -99,7 +121,6 @@ header {
 // middle section 
 
 .middle-content {
-	font-family: 'Raleway', sans-serif;
 	display: flex;
 	flex-direction: column;
 }
@@ -137,7 +158,6 @@ header {
 	padding: 20px;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	font-family: 'Raleway', sans-serif;
 }
 
 .bottom-content .experience {
@@ -156,10 +176,9 @@ header {
 	display: flex;
 	flex-direction: column;
 }
+
 h2 {
-	font-weight: bold;
-	font-size: 20px;
-	margin-bottom: 15px;
+	.font-class;
 }
 
 h3 {
@@ -178,4 +197,11 @@ h3 {
 .experience .education {
 	display: flex;
 	justify-content: center;
+}
+
+@media (max-width: 500px;) {
+	.container {
+		display: flex;
+		justify-content: center;
+	}
 }
